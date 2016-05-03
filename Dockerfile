@@ -1,4 +1,6 @@
 FROM node:0.12
-EXPOSE 8181
-COPY server.js
+RUN mkdir /myapp
+WORKDIR /myapp
+ADD server.js /myapp/server.js
+EXPOSE 8080
 CMD node server.js
